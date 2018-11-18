@@ -13,12 +13,16 @@ Bonus: Can you do this in one pass?
 
 def func(l, k):
     sums = []
-    for index in range(len(l)):
+    for index, element in enumerate(l):
+        print(f'Current element: {element}')
         if index == 0:
             # first element - need another
+            print()
             continue
         for num in range(index):
+            print(f'Appending {l[index]} + {l[num]}')
             sums.append(l[num] + l[index])
+        print()
     print(sums)
     return k in sums
 
