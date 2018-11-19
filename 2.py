@@ -22,5 +22,18 @@ def func(in_array):
         out_array.append(product)
     return out_array
 
+def division_func(in_array):
+    # Using folllow up as hint for a solution using division
+    out_array = []
+    for number in in_array:
+        product = 1
+        for v in in_array:
+            product *= v
+        out_array.append(int(product/number))
+    return out_array
+
+print(division_func([1,2,3,4,5]))
+print(division_func([3, 2, 1]))
+
 print(func([1,2,3,4,5]))
 print(func([3, 2, 1]))
